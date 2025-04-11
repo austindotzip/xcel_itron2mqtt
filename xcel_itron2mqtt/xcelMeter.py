@@ -79,10 +79,11 @@ class xcelMeter():
         self._swVer = details_dict['swVer']
 
         # Device info used for home assistant MQTT discovery
+        device_name = f"{self.name} ({self._lfdi})"
         self.device_info = {
                             "device": {
                                 "identifiers": [self._lfdi],
-                                "name": self.name,
+                                "name": device_name,
                                 "model": self._mfid,
                                 "sw_version": self._swVer
                                 }
