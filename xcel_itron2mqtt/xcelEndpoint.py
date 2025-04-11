@@ -20,13 +20,14 @@ class xcelEndpoint():
     instances.
     """
     def __init__(self, session: requests.Session, mqtt_client: mqtt.Client, 
-                    url: str, name: str, tags: list, device_info: dict):
+                    url: str, name: str, tags: list, device_info: dict, lfdi: str):
         self.requests_session = session
         self.url = url
         self.name = name
         self.tags = tags
         self.client = mqtt_client
         self.device_info = device_info
+        self._lfdi = lfdi
 
         self._mqtt_topic_prefix = 'homeassistant/'
         self._current_response = None
