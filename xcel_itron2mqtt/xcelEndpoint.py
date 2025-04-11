@@ -28,7 +28,7 @@ class xcelEndpoint():
         self.client = mqtt_client
         self.device_info = device_info
 
-        self._mqtt_topic_prefix = os.getenv('MQTT_TOPIC_PREFIX', 'homeassistant/')
+        self._mqtt_topic_prefix = 'homeassistant/fl2/'
         self._current_response = None
         self._mqtt_topic = None
         # Record all of the sensor state topics in an easy to lookup dict
